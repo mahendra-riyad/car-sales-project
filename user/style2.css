@@ -1,0 +1,56 @@
+ .spin { background: none;
+  border: 0;
+  color: #fff;
+  font-size: inherit;
+  font-weight:lighter;
+  position: relative;
+  vertical-align: middle;
+}
+.spin::before, .spin::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.spin {
+  width: 5em;
+  height: 5em;
+  padding: 10px;
+}
+.spin:hover {
+  color: #B70000;
+}
+.spin::before, .spin::after {
+  top: 0;
+  left: 0;
+}
+.spin::before {
+  border: 2px solid transparent;
+}
+.spin:hover::before {
+  border-top-color: #B70000;
+  border-right-color:#B70000;
+  border-bottom-color: #B70000;
+  transition: border-top-color 0.15s linear, border-right-color 0.15s linear 0.1s, border-bottom-color 0.15s linear 0.2s;
+}
+.spin::after {
+  border: 0 solid transparent;
+}
+.spin:hover::after {
+  border-top: 2px solid #B70000;
+  border-left-width: 2px;
+  border-right-width: 2px;
+  -webkit-transform: rotate(270deg);
+          transform: rotate(270deg);
+  transition: border-left-width 0s linear 0.35s, -webkit-transform 0.4s linear 0s;
+  transition: transform 0.4s linear 0s, border-left-width 0s linear 0.35s;
+  transition: transform 0.4s linear 0s, border-left-width 0s linear 0.35s, -webkit-transform 0.4s linear 0s;
+}
+
+.circle {
+  border-radius: 10px;
+  box-shadow: none;
+}
+.circle::before, .circle::after {
+  border-radius: 10px;
+}

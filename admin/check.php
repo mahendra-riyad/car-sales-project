@@ -1,0 +1,30 @@
+<?php 
+if(empty($_POST["email_id"])||empty($_POST["password"])){
+	header("location:index.php?all_filed_required=1");
+ }
+ else{
+ 	$email_id=$_POST["email_id"];
+ 	$password=$_POST["password"];
+
+ 		$a=array('A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z','a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z',0,1,2,3,4,5,6,7,8,9);
+		$b=array_rand($a,5);
+		$car_code="";
+		for($i=0;$i<sizeof($b);$i++){
+			$admin_code=$car_code.$a[$b[$i]]."_".$sn;
+		}
+ 	include("db.php");
+ 	$rs=mysqli_query($con,"select * from admin_login where email_id='$email_id'");
+ 	if($r=mysqli_fetch_array($rs)){
+ 		if($r["password"]==$password){
+ 			setcookie("admin",$email_id,time()+3600);
+ 			header("location:main_page.php");
+ 		}
+ 		else{
+ 			header("location:index.php?incorrect_password=1");
+ 		}
+ 	}
+ 	else{
+			header("location:index.php?invalid_email=1");
+	}
+ }
+ ?>

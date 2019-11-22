@@ -1,0 +1,549 @@
+* {
+    box-sizing: border-box;
+}
+
+/* Style the header */
+.header {
+    background-color:#202020;
+ padding: 20px;
+    text-align: left;
+	
+	font-family:Geneva;
+}
+#logo {
+  font-family: 'Open Sans', sans-serif;
+  color: #555;
+  text-decoration:none;
+  text-transform:capitalize;
+  font-size:70px;
+  font-weight: 800;
+  letter-spacing: -3px;
+  line-height: 1;
+  text-shadow:#CC9933 5px 3px 0;
+  position: relative;
+}
+#logo:after {
+  content:"dreamdealer";
+  position: absolute;
+  left: 8px;
+  top: 32px;
+}
+#logo:after {
+  /*background: url(https://subtlepatterns.com/patterns/crossed_stripes.png) repeat;*/
+  background-image: -webkit-linear-gradient(left top, transparent 0%, transparent 25%, #555 25%, #555 50%, transparent 50%, transparent 75%, #555 75%);
+  background-size: 4px 4px;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  z-index: -5;
+  display: block;
+  text-shadow: none;
+}
+/* Style the top navigation bar */
+.topnav {
+    overflow: hidden;
+    background-color:#000000;
+  padding:5px;
+}
+
+/* Style the topnav links */
+.topnav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  border-right:outset 1px;
+  border-right-color:#999999;
+  border-radius: 4px;
+}
+
+/* Change color on hover */
+.topnav a:hover{
+background-color:#B70000;
+transition: 1s;
+
+}
+.active{
+background-color:#B70000;
+}
+.show{
+background-color:#B70000;
+}
+.column {
+    float: left;
+    padding: 10px;
+}
+.column.left{
+	margin-top:20px;
+    float: left;
+    width: 25%;
+    padding: 25px;
+	background-color:#181818;
+	border-radius:2px;
+  margin-left: 15px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+.column.middle {
+    width: 50%;
+	margin-left:18px;
+	margin-top:20px;
+	padding:0px;
+	background-color:#202020;
+	
+	
+}
+.column.right {
+  width: 20%;
+/*  margin-left:77%;*/
+ 
+  padding:0px;
+  margin-top:20px;
+  background-color:#202020;
+  margin-left:17px;
+}
+
+
+	
+}
+.footer {
+    background-color: #202020;
+    padding: 10px;
+    text-align: center;
+	width:100%;
+	
+}
+.pannel{
+border-radius:0 !important;
+background-color:#101010;
+}
+.pannel:hover {
+border:solid;
+border:#CCCCCC;
+
+}
+</style>
+<style>
+.tags {
+  list-style: none;
+  margin: 0;
+  overflow: hidden; 
+  padding: 0;
+}
+
+.tags{
+  float: left; 
+}
+
+.tag {
+  border-radius: 3px 0 0 3px;  
+  display: inline-block;
+  height: 26px;
+  line-height: 26px;
+  padding: 0 20px 0 23px;
+  position: relative;
+  margin: 0px;
+  text-decoration: none;
+  -webkit-transition: color 0.2s;
+    background-color: crimson;
+  color: white;
+  font-size:16px;
+}
+.form-control{
+margin-top:10px;
+
+}
+.search{
+font-size:20px;
+text-decoration:none;
+text-transform:uppercase;
+color:#FFFFFF;
+background-color:#B70000;
+border-radius:2px;
+text-align:center;
+padding:10px;
+}
+.row2 {
+
+background-color:#363636;
+margin-bottom:20px;
+border-radius:2px;
+margin-top:20px;
+}
+.col-sm {
+margin-top:20px;
+color:#FFFFFF;}
+</style>
+<style>
+.carousel-caption {
+background-color:#000000;
+color:#FFFFFF;
+font-size:30px;
+margin-bottom:30px;
+opacity:.8;
+border-radius:4px;
+}
+select {
+    padding:15px;
+    margin-top:5px;
+  margin-bottom:5px;
+    background:#101010;
+    color:#FFFFFF;
+    border:none;
+  border-bottom:1px #000000 groove;
+  width:100%;
+  text-transform:uppercase;
+  letter-spacing: 1px;
+  word-spacing: 2px;
+  font-weight: lighter;
+}
+select : focus,input:focus {
+  outline: none;
+}
+.submit{
+ padding:15px;
+    margin-top:5px;
+  margin-bottom:5px;
+    background:#000000;
+    color:#FFFFFF;
+  border:none;
+  width:100%;
+  text-transform:uppercase;
+  text-align:center;
+  }
+/* Targetting Webkit browsers only. FF will show the dropdown arrow with so much padding. */
+label {
+ width:100%;
+ color:#FFFFFF;
+ text-transform:uppercase;
+ }
+ 
+ .button {
+   padding:15px;
+    margin-top:5px;
+  margin-bottom:5px;
+    background:#000000;
+    color:#FFFFFF;
+  border:none;
+  width:100%;
+  text-transform:uppercase;
+  border-radius: 4px;
+ }
+ .button:hover {
+ background-color:#B70000;
+ color:#FFFFFF;
+ box-shadow:#101010 1px 1px;
+ -webkit-transition: color 0.5s;
+ transition:.5s;
+ 
+ }
+ .weekofthedeal {
+ background-color:#000000;
+color:#FFFFFF;
+font-size:20px;
+
+opacity:.8;
+border-radius:4px;
+text-align:center;
+}
+#login {
+font-size:20px;
+background-color:#202020;
+color:#CCCCCC;
+padding:10px;
+margin:10px;
+border:#CCCCCC groove 1px;;
+border-radius:6px;
+}
+#login:hover {
+color:#FFFFFF;
+background-color:#B70000;
+transition:.5s;
+box-shadow:#151515 1px 1px;
+
+}
+#myBtn {
+  display: none;
+
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 16px;
+  border: none;
+  outline: none;
+  background-color:#B70000;
+  color:#FFFFFF;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 4px;
+  margin-left:27%;
+}
+
+#myBtn:hover {
+  background-color:#FF0000;
+}
+p#dollar {
+color:#FFFF71;
+ padding:10px; 
+ background-color:#000000; 
+ text-align:center;
+ font-size:24px;
+ border-bottom-color:#CCCCCC;
+ border-bottom:groove;
+ border-width:thin;
+ }
+/*button#dollar {
+ margin-top:-10px;
+ width:100%;
+ border:none;
+ color:#FFFFFF;
+ padding:17px; 
+ background-color:#000000; 
+ text-align:center;
+ font-size:14px;
+ border-bottom-color:#CCCCCC;
+ border-bottom:groove;
+ border-width:thin;
+}
+button#dollar {
+background-color:#B70000;
+transition:.5s;
+}*/
+
+.pannel{
+border-radius:0 !important;
+background-color:#101010;
+}
+.pannel:hover {
+box-shadow:1px 1px 1px 1px #252525;
+border:solid;
+border:#CCCCCC;
+}
+.tags {
+  list-style: none;
+  margin: 0;
+  overflow: hidden; 
+  padding: 0;
+}
+
+.tags{
+  float: left; 
+}
+
+.tag {
+  border-radius: 3px 0 0 3px;  
+  display: inline-block;
+  height: 26px;
+  line-height: 26px;
+  padding: 0 20px 0 23px;
+  position: relative;
+  margin: 0px;
+  text-decoration: none;
+  -webkit-transition: color 0.2s;
+    background-color: crimson;
+  color: white;
+  font-size:16px;
+}
+
+
+
+.btn {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 4px;
+  margin: 0px 0;
+  opacity: 0.85;
+  display: inline-block;
+  font-size: 17px;
+  line-height: 20px;
+  text-decoration: none;
+  border-bottom:#FFFFFF thin ;
+   /* remove underline from anchors */
+}
+/*social icon style */
+.btn:hover {
+  opacity: 1;
+  color:#FFFFFF;
+}
+
+/* add appropriate colors to fb, twitter and google buttons */
+.fb {
+  background-color: #3B5998;
+  color: white;
+}
+
+.twitter {
+  background-color: #55ACEE;
+  color: white;
+}
+
+.google {
+  background-color: #dd4b39;
+  color: white;
+}
+.information {
+background-color:#101010;
+padding-top:25px;
+}
+p#information {
+color:#FFFFFF;
+border-bottom:#FFFFFF groove 1px;
+padding:15px;
+padding-top:0px;
+padding-left:0px;
+margin-bottom:10px;
+}
+/* full information*/
+.accordion {
+    background-color:#101010;;
+    color:#FFFFFF;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    transition: .5s;
+	
+	
+	
+}
+
+.active, .accordion:hover {
+    background-color: #000000;
+}
+
+.accordion:after {
+    content: '\002B';
+    color: #777;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+}
+
+.active:after {
+    content: "\2212";
+}
+
+.panel {
+    padding: 0px 18px;
+    background-color: #151515;
+	color:#FFFFFF;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 1.4s ease-out;
+	border-bottom:#CCCCCC solid 1px;
+}
+
+
+/* Style the tab */
+.tab {
+    overflow: hidden;
+    background-color: #151515;
+	margin-top:30px;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+    background-color:#151515;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+	padding-left:30px;
+	padding-right:30px;
+    transition: 0.3s;
+    font-size: 17px;
+	opacity:.8;
+	color:#FFFFFF;
+	border-right:#FFFFFF solid 1px;
+	
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+    background-color: #000000;
+	opacity:1;
+	border-bottom:none;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+    background-color:#000000;
+	opacity:1;
+	border-bottom:none;
+	
+}
+
+/* Style the tab content */
+.tabcontent {
+    display: none;
+    padding:30px;
+	background-color:#000000;
+    border-top: none;
+	color:#FFFFFF;
+}
+
+
+
+
+/*form */
+.input-container {
+    display: -ms-flexbox; /* IE10 */
+    display: flex;
+    width: 60%;
+    margin-bottom: 15px;
+}
+
+.icon {
+    padding: 10px;
+    background:#202020;
+    color: white;
+    min-width: 50px;
+    text-align: center;
+	border-right:#000000 solid 1px;
+	
+}
+
+.input-field {
+    width: 100%;
+    padding: 10px;
+    outline: none;
+	background:#202020;
+	border:none;
+	
+}
+
+/* Set a style for the submit button */
+.form_submit {
+      background-color:#B70000;
+    color: white;
+    padding: 15px 20px;
+    border: none;
+    cursor: pointer;
+    opacity: 0.7;
+  width:30%;
+  margin-left: 70%;
+  margin-bottom: 40px;
+	
+}
+
+.form_submit:hover {
+    opacity: 1;
+	background-color:#B70000;
+	  transition: 1s;
+}
+
+
+
+
+
